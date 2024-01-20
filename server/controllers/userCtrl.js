@@ -110,7 +110,7 @@ const applyDoctorController = async (req, res) => {
     res.status(500).send({
       success: false,
       error,
-      message: "Error WHile Applying For Doctor",
+      message: "Error While Applying For Doctor",
     });
   }
 };
