@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    section{
+        @apply py-[75px]
+    }
+}
+
+@layer components{
+    .container{
+        @apply max-w-full w-[1200px] px-20 mx-auto
+    }
+    .btn{
+        @apply bg-purple-600 py-[15px] px-[25px]  shadow-md rounded-lg text-white font-[600] mt-[28px] hover:bg-purple-800 transition-all
+    }
+    .heading{
+        @apply text-[35px] leading-[50px] font-[700] text-headingColor capitalize 
+    }
+    .text_para{
+        @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px]
+    }
+    .header{
+        @apply  bg-center bg-cover w-full h-[70px] leading-[70px];
+    }
+    .hero_section{
+        @apply bg-white bg-no-repeat bg-center bg-cover
+    }
+    .form__label{
+        @apply text-textColor font-semibold text-[16px] leading-7 mb-2
+    }
+    .form__input{
+        @apply w-full p-2  border-solid border-b-2 focus:outline-none 
+        focus:border-purple-600 text-[14px] leading-7 text-headingColor 
+        placeholder:text-textColor cursor-pointer rounded-md
+    }
+}
+
+
+
+@media only screen and (max-width:1024px){
+    .container{
+        @apply w-full;
+    }
+    section{
+        @apply py-[25px];
+    }
+}
+
+@media only screen and (max-width :768px){
+    .heading{
+        @apply text-[26px] leading-[36px];
+    }
+    .text_para{
+        @apply text-[16px] leading-7 mt-3;
+    }
+}

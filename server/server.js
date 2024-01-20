@@ -4,9 +4,9 @@ const moragan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cors = require('cors');
+// const path = require("path");
 
-
-//dotenv config
+//dotenv conig
 dotenv.config();
 
 //mongodb connection
@@ -20,9 +20,13 @@ app.use(cors());
 app.use(express.json());
 app.use(moragan("dev"));
 
+//routes
+app.use("/api/v1/user", require("./routes/userRoutes"));
+app.use("/api/v1/admin", require("./routes/adminRoutes"));
+app.use("/api/v1/doctor", require("./routes/doctorRoutes"));
 
 //port
-const port = process.env.PORT || 5040;
+const port = process.env.PORT || 8080;
 //listen port
 app.listen(port, () => {
   console.log(
