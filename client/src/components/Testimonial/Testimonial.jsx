@@ -80,9 +80,7 @@ const Testimonial = () => {
             <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
               I can't praise MEDCI enough! This app has streamlined
               my healthcare experience. From hassle-free appointment scheduling
-              to secure communication with my doctor, it's a game-changer. The
-              user-friendly design is a bonus. Thanks to MEDCI, managing my
-              health is now a breeze!
+              to secure communication with my doctor, it's a game-changer. 
             </p>
           </div>
         </SwiperSlide>
@@ -110,8 +108,7 @@ const Testimonial = () => {
               Absolutely impressed with MEDCI! This app has simplified my
               healthcare routine. Booking appointments is a breeze, and the
               secure messaging feature ensures quick communication with my
-              doctor. The convenience it offers is unmatched. I highly recommend
-              MEDCI for a stress-free and efficient healthcare experience.
+              doctor.
             </p>
           </div>
         </SwiperSlide>
@@ -139,9 +136,7 @@ const Testimonial = () => {
               Kudos to MEDCI for transforming how I approach
               healthcare. This app is a lifesaver! The seamless appointment
               scheduling, virtual consultations, and user-friendly interface
-              have elevated my healthcare experience. It's efficient, effective,
-              and incredibly convenient. If you're looking for a top-notch
-              healthcare app, MEDCI is the way to go!
+              have elevated my healthcare experience. 
             </p>
           </div>
         </SwiperSlide>
