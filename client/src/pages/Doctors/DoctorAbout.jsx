@@ -28,7 +28,7 @@ const DoctorAbout = () => {
                     </p>
                 </div>
                 <p className='text-[14px] leading-5 font-medium text-textColor'>
-                        New Apollo Hospital,New York
+                        New Apollo Hospital,Kolkata
                 </p>
             </li>
         </ul>
@@ -43,7 +43,7 @@ const DoctorAbout = () => {
                     </p>
                 </div>
                 <p className='text-[14px] leading-5 font-medium text-textColor'>
-                        New Apollo Hospital,New York
+                        Apollo Hospital,Bangalore
                 </p>
             </li>
         </ul>
@@ -74,7 +74,7 @@ const DoctorAbout = () => {
                 Sr. Surgeon
             </p>
             <p className='text-[14px] leading-5 font-medium text-textColor'>
-                New Apollo Hospital,New York
+                BMRC Hospital, Mumbai
             </p>
         </li>
     </ul>
