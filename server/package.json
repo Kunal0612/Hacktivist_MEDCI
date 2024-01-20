@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Healthcare system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kunal0612/Hacktivist_MEDCI.git"
+  },
+  "author": "Hacktivist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kunal0612/Hacktivist_MEDCI/issues"
+  },
+  "homepage": "https://github.com/Kunal0612/Hacktivist_MEDCI#readme"
+}
