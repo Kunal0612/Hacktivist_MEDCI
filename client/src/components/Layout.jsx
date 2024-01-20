@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
               <h3>DOC APP</h3>
               <hr />
             </div>
-            <div className="menu mt-4 mb-10 p-1 font-[600]">
+            <div className="menu mt-4 mb-10 p-1 font-[600] bg-purple-600">
               {SidebarMenu.map((menu) => {
                 const isActive = location.pathname === menu.path;
                 return (

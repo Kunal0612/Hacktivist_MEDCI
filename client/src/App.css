@@ -68,7 +68,8 @@ body {
   .menu{
     width:15rem;
     height: 100%;
-    position: absolute;
+    /* position: absolute; */
+    color: 'black';
     top:0;
     right:0;
     background: #fff;

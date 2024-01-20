@@ -52,14 +52,20 @@ const Home = () => {
             <p className='text_para text-black-500 font-[400] text-white'>
             "Seamless Care, Anywhere: Your Virtual Hub for Health and Wellness."
             </p>
-            <button onClick={handleLogin} className=' btn shadow-inner shadow-white bg-yellow-400 text-purple-700'>
+            <div className='flex flex-col lg:flex-row gap-2'>
+            <button onClick={handleLogin} className=' btn shadow-inner shadow-white bg-yellow-400 text-purple-700 hover:text-white'>
               Request an Appointment
             </button>
+            <Link to={'/live'} onClick={handleLogin} className=' btn shadow-inner shadow-white bg-yellow-400 text-purple-700 hover:text-white'>
+              Live Webinar
+            </Link>
+            </div>
+            
           </div>
 
           {/* hero counter */}
           <div className='mt-[30px] lg:mt-[20px] flex flex-row
-          lg:flex-row lg:items-center gap-10 lg:gap-[40px]'>
+          lg:flex-row items-center gap-10 lg:gap-[40px]'>
 
             <div>
               <h2 className=' w-[60px] h-[60px] text-[36px] leading-[56px] lg:text-[36px] md:text-[20px] p-3 shadow-inner shadow-gray-100 text-center

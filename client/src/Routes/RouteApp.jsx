@@ -19,6 +19,7 @@ import Users from "../pages/admin/Users";
 import Profile from "../pages/doctor/Profile";
 import { Route,Routes } from "react-router-dom";
 import Predict from '../pages/Predict';
+import Webinar from '../pages/webinar/Webinar';
 function RouteApp() {
   return (
     <div>
@@ -31,6 +32,7 @@ function RouteApp() {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/services' element={<Services/>}/>
     <Route path='/predict/:param' element={<Predict/>}/>
+    <Route path='/live' element={<Webinar/>}/>
 
    
             <Route
