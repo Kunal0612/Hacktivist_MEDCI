@@ -253,8 +253,11 @@ const Home = () => {
     <div className='xl:w-[470px] mx-auto'>
         <h2 className='heading text-center'>Our Skilled Practitioners</h2>
         <p className='text_para text-center'>"Introducing Our Care Champions: Get to Know the Faces Behind Your Health and Wellness!"</p>
-      </div>
-      <DoctorList/>
+    </div>
+    <DoctorList/>
+    <a href='https://blue-rooms.vercel.app/auth' className="flex flex-row justify-center mt-10">
+      <button className="px-5 py-4 bg-purple-500 rounded-md text-white">Chat with doctor</button>
+    </a>
     </div>
   </section>
   {/* faq section */}
