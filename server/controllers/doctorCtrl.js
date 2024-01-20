@@ -6,7 +6,7 @@ const getDoctorInfoController = async (req, res) => {
     const doctor = await doctorModel.findOne({ userId: req.body.userId });
     res.status(200).send({
       success: true,
-      message: "doctor data fetch success",
+      message: "Doctor data fetch success",
       data: doctor,
     });
   } catch (error) {
@@ -92,7 +92,7 @@ const updateStatusController = async (req, res) => {
     const notification = user.notification;
     notification.push({
       type: "status-updated",
-      message: `your appointment has been updated ${status}`,
+      message: `Your Appointment has been updated ${status}`,
       onCLickPath: "/doctor-appointments",
     });
     await user.save();
@@ -105,7 +105,7 @@ const updateStatusController = async (req, res) => {
     res.status(500).send({
       success: false,
       error,
-      message: "Error In Update Status",
+      message: "Error In update Status",
     });
   }
 };
