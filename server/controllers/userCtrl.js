@@ -38,13 +38,13 @@ const loginController = async (req, res) => {
     if (!user) {
       return res
         .status(200)
-        .send({ message: "user not found", success: false });
+        .send({ message: "Invlid Email or Password", success: false });
     }
     const isMatch = await bcrypt.compare(req.body.password, user.password);
     if (!isMatch) {
       return res
         .status(200)
-        .send({ message: "Invlid EMail or Password", success: false });
+        .send({ message: "Invlid Email or Password", success: false });
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
@@ -63,7 +63,7 @@ const authController = async (req, res) => {
     user.password = undefined;
     if (!user) {
       return res.status(200).send({
-        message: "user not found",
+        message: "User not found",
         success: false,
       });
     } else {
@@ -103,14 +103,14 @@ const applyDoctorController = async (req, res) => {
     await userModel.findByIdAndUpdate(adminUser._id, { notification });
     res.status(201).send({
       success: true,
-      message: "Doctor Account Applied SUccessfully",
+      message: "Doctor Account Applied Successfully",
     });
   } catch (error) {
     console.log(error);
     res.status(500).send({
       success: false,
       error,
-      message: "Error While Applying For Doctor",
+      message: "Error While Applying For a Doctor",
     });
   }
 };
@@ -118,7 +118,6 @@ const applyDoctorController = async (req, res) => {
 // //notification ctrl
 const getAllNotificationController = async (req, res) => {
   try {
-    console.log('hhh')
     const user = await userModel.findOne({ _id: req.body.userId });
     const seennotification = user.seennotification;
     const notification = user.notification;
@@ -128,7 +127,7 @@ const getAllNotificationController = async (req, res) => {
     const updatedUser = await user.save();
     res.status(200).send({
       success: true,
-      message: "all notification marked as read",
+      message: "All notification marked as read",
       data: updatedUser,
     });
   } catch (error) {
@@ -158,7 +157,7 @@ const deleteAllNotificationController = async (req, res) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "unable to delete all notifications",
+      message: "Unable to delete all notifications",
       error,
     });
   }
@@ -170,7 +169,7 @@ const getAllDocotrsController = async (req, res) => {
     const doctors = await doctorModel.find({ status: "approved" });
     res.status(200).send({
       success: true,
-      message: "Docots Lists Fetched Successfully",
+      message: "Doctors Lists Fetched Successfully",
       data: doctors,
     });
   } catch (error) {
@@ -178,7 +177,7 @@ const getAllDocotrsController = async (req, res) => {
     res.status(500).send({
       success: false,
       error,
-      message: "Errro WHile Fetching DOcotr",
+      message: "Error While Fetching Doctor",
     });
   }
 };
@@ -194,7 +193,7 @@ const bookeAppointmnetController = async (req, res) => {
     const user = await userModel.findOne({ _id: req.body.doctorInfo.userId });
     user.notification.push({
       type: "New-appointment-request",
-      message: `A nEw Appointment Request from ${req.body.userInfo.name}`,
+      message: `A New Appointment Request from ${req.body.userInfo.name}`,
       onCLickPath: "/user/appointments",
     });
     await user.save();
@@ -231,7 +230,7 @@ const bookingAvailabilityController = async (req, res) => {
     });
     if (appointments.length > 0) {
       return res.status(200).send({
-        message: "Appointments not Availibale at this time",
+        message: "Appointments not Available at this time",
         success: true,
       });
     } else {
@@ -257,7 +256,7 @@ const userAppointmentsController = async (req, res) => {
     });
     res.status(200).send({
       success: true,
-      message: "Users Appointments Fetch SUccessfully",
+      message: "Users Appointments Fetch Successfully",
       data: appointments,
     });
   } catch (error) {
