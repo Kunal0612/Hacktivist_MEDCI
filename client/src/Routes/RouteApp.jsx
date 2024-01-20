@@ -19,6 +19,7 @@ import Users from "../pages/admin/Users";
 import Profile from "../pages/doctor/Profile";
 import { Route,Routes } from "react-router-dom";
 import Predict from '../pages/Predict';
+import FindADoc from '../pages/Doctors/Doctors';
 function RouteApp() {
   return (
     <div>
@@ -29,6 +30,7 @@ function RouteApp() {
     {/* <Route path='/doctor/:id' element={<DoctorDetails/>}/>  */}
   
     <Route path='/contact' element={<Contact/>}/>
+    <Route path='/findadoctor' element={<FindADoc/>}/>
     <Route path='/services' element={<Services/>}/>
     <Route path='/predict/:param' element={<Predict/>}/>
 
